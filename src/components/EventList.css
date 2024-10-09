@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements on mobile */
+    padding: 1rem;
+  }
+  
+  /* Styles for larger screens */
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row; /* Arrange elements side by side on larger screens */
+    }
+  }
+  
+  .event-card {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1 1 100%; /* Allow cards to take full width on mobile */
+  }
+  
+  /* Styles for larger screens */
+  @media (min-width: 768px) {
+    .event-card {
+      flex: 1 1 30%; /* Allow cards to take a third of the width on larger screens */
+    }
+  }
+  
