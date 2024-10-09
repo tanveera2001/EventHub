@@ -1,15 +1,17 @@
 // src/components/LandingPage.js
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
-    return (
-        <div>
-            <h1>Welcome to EventHub</h1>
-            <p>Your one-stop destination for all events!</p>
-            <a href="/events">View Events</a>
-        </div>
-    );
+  return (
+    <div>
+      <h1>Welcome to EventHub</h1>
+      <Link to="/events">
+        <button>View Events</button>
+      </Link>
+    </div>
+  );
 };
 
 export default LandingPage;

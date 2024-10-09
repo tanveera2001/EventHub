@@ -1,20 +1,28 @@
 // src/App.js
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import EventList from './components/EventList';
+import EventDetails from './components/EventDetails';
 
-const App = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/events" element={<EventList />} />
-                {/* Add more routes as needed */}
-            </Routes>
-        </Router>
-    );
-};
+function App() {
+  return (
+    <Router>
+      <div>
+        <Routes>
+          {/* Default route - Landing Page */}
+          <Route path="/" element={<LandingPage />} />
+
+          {/* Event List route */}
+          <Route path="/events" element={<EventList />} />
+
+          {/* Event Details route */}
+          <Route path="/events/:id" element={<EventDetails />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
 export default App;
